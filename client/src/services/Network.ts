@@ -31,7 +31,7 @@ export default class Network {
 
   constructor() {
     const protocol = window.location.protocol.replace('http', 'ws')
-    const endpoint ='https://cloudworkhub-server.onrender.com'
+    const endpoint ='ws://65.0.138.23:2567'
     this.client = new Client(endpoint)
     this.joinLobbyRoom().then(() => {
       store.dispatch(setLobbyJoined(true))
